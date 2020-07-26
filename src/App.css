@@ -1,16 +1,8 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: sans-serif;
+  font-weight: 300;
+  margin: 50px auto 80px;
 }
 
 .App-header {
@@ -24,15 +16,145 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-weight: 300;
+  letter-spacing: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  cursor: pointer;
+  font-family: neue-haas grotesk-display, sans-serif;
+  font-stretch: normal;
+  border: 1px solid #f5502f;
+  background:  #f2674b;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  outline: none;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #f5502f;
+}
+
+button:active {
+  opacity: 0.75;
+}
+
+.schema, .type {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+}
+
+.type-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.type-card {
+  width: 380px;
+  height: 90px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  padding: 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.type-card:hover {
+  background-color: #eee;
+}
+
+.type-card.completed {
+  background-color: lightgreen;
+  border-color: limegreen;
+}
+
+.type-card.completed:hover {
+  background-color: limegreen;
+}
+
+.type-card.started {
+  background-color: lightgoldenrodyellow;
+  border-color: palegoldenrod;
+}
+
+.type-card.started:hover {
+  background-color: palegoldenrod;
+}
+
+.type-card:active {
+  opacity: 0.75;
+}
+
+.type-card .label {
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-family: sans-serif;
+  color: black;
+  opacity: 0.6;
+}
+
+.type button {
+  margin: 20px;
+}
+
+.ticker {
+  font-size: 40px;
+  margin: 40px;
+}
+
+.field-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.field-card {
+  border: 1px solid lightgray;
+  background-color: #eee;
+  border-radius: 6px;
+  padding: 10px 20px;
+  width: 280px;
+  color: gray;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.field-card.found {
+  background: lightgreen;
+  border-color: limegreen;
+  color: black;
+}
+
+.type input {
+  font-size: 28px;
+  padding: 10px;
+  margin-top: 40px;
+  width: 800px;
+  text-align: center;
+  outline: none;
+}
+
+.wrong {
+  margin-top: 20px;
+  height: 20px;
 }

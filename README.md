@@ -1,44 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Schema Stumper
+A simple quiz game that loads a database schema and sees if you can name all the fields for the tables.
 
-## Available Scripts
+*This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Some of the Create React App things like tests are not fully implemented at this time.*
 
-In the project directory, you can run:
+## How does it work?
+It works by scanning a Postgres database for all of the tables and columns, caches this schema and starts a static web app quiz game based on this schema.
 
-### `yarn start`
+You configure the app via environment variables to point at a Postgres database.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+When the app starts up it will try to connect to the DB and generate a static file to power the quiz game.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## How to run it
+You run the app by specifying some environment variables to connect to a Postgres database. The environment variables are:
+- `DATABASE_HOST` the address of the database. Defaults to `0.0.0.0`
+- `DATABASE_PORT` the port for the database. Defaults to `5432`
+- `DATABASE_NAME` the name of the database to connect to. **Must be specified.**
+- `DATABASE_USER` the user account to connect with. Defaults to `postgres`.
+- `DATABASE_PASSWORD` the password to connect with. **Must be specified.**
 
-### `yarn test`
+So to run the game simply run `npm start` preceded by any environment variables that aren't already set in your shell.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+e.g.: (this assumes the other required ENV variables are set...)
+```
+DATABASE_NAME=billing npm start
+```
 
-### `yarn build`
+## How to play
+Running `npm start` (see above) with the proper DB connection info specified should open a browser pointed at `localhost:3000`.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The first screen you see will list all of the tables from the database you configured. For each table you can either see a completion percentage or a best time.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Clicking on a table name will take you to the quiz screen. When you click **START** begin typing in the names of the columns and hit enter to submit them. Case matters! If the column exists you'll see it appear.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+See if you know the columns for every table!
