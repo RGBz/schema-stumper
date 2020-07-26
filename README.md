@@ -40,4 +40,6 @@ Here's where you can test your table knowledge! The quiz is to see if you know a
 
 When you click **START** begin typing in the names of the columns and hit enter to submit them. Case matters! If the column exists you'll see it appear. If it doesn't exist, you'll see a red X. There are no penalties for wrong guesses, it's just feedback.
 
+When you guess all the column names or run out of time, the quiz screen will close and you'll be taken back to the list screen to view your score (it's a little abrupt as currently implemented, but you'll get the idea).
+
 Good Luck and have fun!
