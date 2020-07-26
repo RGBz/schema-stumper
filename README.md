@@ -28,8 +28,16 @@ DATABASE_NAME=billing npm start
 ## How to play
 Running `npm start` (see above) with the proper DB connection info specified should open a browser pointed at `localhost:3000`.
 
-The first screen you see will list all of the tables from the database you configured. For each table you can either see a completion percentage or a best time.
+### Table List Screen
+The first screen lists all of the tables from the database you configured.
 
-Clicking on a table name will take you to the quiz screen. When you click **START** begin typing in the names of the columns and hit enter to submit them. Case matters! If the column exists you'll see it appear.
+For each table you'll either see a completion percentage or your best time (scores are stored to the browser's `localStorage`).
 
-See if you know the columns for every table!
+Clicking on a table name will take you to the Table Quiz Screen.
+
+### Table Quiz Screen
+Here's where you can test your table knowledge! The quiz is to see if you know all the column names.
+
+When you click **START** begin typing in the names of the columns and hit enter to submit them. Case matters! If the column exists you'll see it appear. If it doesn't exist, you'll see a red X. There are no penalties for wrong guesses, it's just feedback.
+
+Good Luck and have fun!
