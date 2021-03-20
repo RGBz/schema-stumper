@@ -1,4 +1,4 @@
-# Schema Stumper
+# schema-stumper
 A simple quiz game that loads a database schema and sees if you can name all the fields for the tables.
 
 *This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Some of the Create React App things like tests are not fully implemented at this time.*
